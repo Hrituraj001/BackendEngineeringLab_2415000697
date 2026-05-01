@@ -55,9 +55,6 @@ app.get("/admin", (req, res) => {
   res.send("Welcome to Admin Panel");
 });
 
-
-
-// 🔹 Logout Route
 app.get("/logout", (req, res) => {
   req.session.destroy(() => {
     res.clearCookie("role");
